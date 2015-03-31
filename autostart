@@ -1,5 +1,5 @@
 # set wallpaper image
-wallpaper="debian-light.png"
+wallpaper="joy-wallpaper_1920x1080.png"
  
 # set desktop env 
 DESKTOP_ENV="OPENBOX"
@@ -26,7 +26,7 @@ conky &
 mopidy &
 
 # screensaver and lockscreen
-# xscreensaver -no-splash &
+xscreensaver -no-splash &
 
 # set compose key
 setxkbmap -option compose:ralt

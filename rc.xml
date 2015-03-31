@@ -416,7 +416,7 @@
         <name>Terminator</name>
       </startupnotify>
       <action name="Execute">
-        <command>x-terminal-emulator -l 123</command>
+        <command>x-terminal-emulator</command>
       </action>
     </keybind>
     <keybind key="C-space">
