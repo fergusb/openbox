@@ -1,0 +1,32 @@
+# set wallpaper image
+wallpaper="debian-light.png"
+ 
+# set desktop env 
+DESKTOP_ENV="OPENBOX"
+
+# start panel
+# tint2 &
+
+# composite manager
+xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
+
+# Starts a light-weight X11 desktop panel.
+# fbpanel &
+
+# wallpaper dir
+feh --bg-scale ~/Pictures/Wallpaper/${wallpaper} &
+
+# SCIM support (for typing non-english characters)
+# scim -d &
+
+# stuff
+conky &
+
+# music
+mopidy &
+
+# screensaver and lockscreen
+# xscreensaver -no-splash &
+
+# set compose key
+setxkbmap -option compose:ralt
