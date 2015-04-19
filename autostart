@@ -4,18 +4,6 @@ DESKTOP_ENV="OPENBOX"
 # set wallpaper image
 wallpaper="joy-wallpaper_1920x1080.png"
  
-# D-bus etc
-if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
-  eval `dbus-launch --sh-syntax --exit-with-session`
-  eval `ssh-agent`
-  eval `gpg-agent --daemon`
-fi
-
-# keyring
-if which gnome-keyring-daemon >/dev/null; then
-  gnome-keyring-daemon --start --components=ssh &
-fi
-
 # composite manager
 # xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
 xcompmgr &
@@ -42,6 +30,9 @@ mpd &
 
 # screensaver and lockscreen
 # xscreensaver -no-splash &
+
+# launcher
+synapse &
 
 # clipboard
 parcellite &

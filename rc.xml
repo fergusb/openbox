@@ -419,6 +419,7 @@
         <command>x-terminal-emulator</command>
       </action>
     </keybind>
+    <!--
     <keybind key="C-space">
       <startupnotify>
         <enabled>true</enabled>
@@ -428,6 +429,7 @@
         <command>gmrun</command>
       </action>
     </keybind>
+    -->
     <!-- Launch gnome-screenshot when Print is pressed -->
     <keybind key="Print">
       <action name="Execute">
