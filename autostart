@@ -1,14 +1,24 @@
-# set wallpaper image
-wallpaper="joy-wallpaper_1920x1080.png"
- 
 # set desktop env 
 DESKTOP_ENV="OPENBOX"
 
-# start panel
-# tint2 &
+# set wallpaper image
+wallpaper="joy-wallpaper_1920x1080.png"
+ 
+# D-bus etc
+if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
+  eval `dbus-launch --sh-syntax --exit-with-session`
+  eval `ssh-agent`
+  eval `gpg-agent --daemon`
+fi
+
+# keyring
+if which gnome-keyring-daemon >/dev/null; then
+  gnome-keyring-daemon --start --components=ssh &
+fi
 
 # composite manager
-xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
+# xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
+xcompmgr &
 
 # Starts a light-weight X11 desktop panel.
 # fbpanel &
@@ -16,18 +26,25 @@ xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
 # wallpaper dir
 feh --bg-scale ~/Pictures/Wallpaper/${wallpaper} &
 
+# start panel
+# tint2 &
+
 # SCIM support (for typing non-english characters)
 # scim -d &
 
 # stuff
-conky &
+# conky &
 
 # music
 # mopidy &
-mpd ~/.config/mpd/mpd.conf &
+# mpd ~/.config/mpd/mpd.conf &
+mpd &
 
 # screensaver and lockscreen
 # xscreensaver -no-splash &
+
+# clipboard
+parcellite &
 
 # set compose key
 setxkbmap -option compose:ralt
