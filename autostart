@@ -23,10 +23,11 @@ feh --bg-scale ~/Pictures/Wallpaper/${wallpaper} &
 conky &
 
 # music
-mopidy &
+# mopidy &
+mpd ~/.config/mpd/mpd.conf &
 
 # screensaver and lockscreen
-xscreensaver -no-splash &
+# xscreensaver -no-splash &
 
 # set compose key
 setxkbmap -option compose:ralt
