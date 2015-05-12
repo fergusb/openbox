@@ -2,11 +2,13 @@
 DESKTOP_ENV="OPENBOX"
 
 # set wallpaper image
-wallpaper="joy-wallpaper_1920x1080.png"
+wallpaper="debian-blue.png"
+# wallpaper="debian-wallpaper-10.png"
+# wallpaper="joy-wallpaper_1920x1080.png"
  
 # composite manager
-# xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
-xcompmgr &
+xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
+# xcompmgr &
 
 # Starts a light-weight X11 desktop panel.
 # fbpanel &
@@ -16,6 +18,11 @@ feh --bg-scale ~/Pictures/Wallpaper/${wallpaper} &
 
 # start panel
 # tint2 &
+# lxpanel &
+xfce4-panel &
+
+# audio control
+pasystray &
 
 # SCIM support (for typing non-english characters)
 # scim -d &
@@ -26,7 +33,6 @@ feh --bg-scale ~/Pictures/Wallpaper/${wallpaper} &
 # music
 # mopidy &
 # mpd ~/.config/mpd/mpd.conf &
-mpd &
 
 # screensaver and lockscreen
 # xscreensaver -no-splash &
@@ -35,7 +41,9 @@ mpd &
 synapse &
 
 # clipboard
-parcellite &
+# parcellite &
 
 # set compose key
 setxkbmap -option compose:ralt
+
+# xmodmap ~/.Xmodmap

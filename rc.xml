@@ -439,20 +439,33 @@
     <!-- Begin Media Keys  -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
+        <startupnotify>  
+          <enabled>true</enabled>  
+          <name>volumeup</name>  
+        </startupnotify>
         <command>amixer set Master 5%+</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioLowerVolume">
-      <action name="Execute">
-        <command>amixer set Master 5%-</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>amixer set Master toggle</command>
+        <startupnotify>  
+          <enabled>true</enabled>  
+          <name>volumemute</name>  
+        </startupnotify>
+        <!-- <command>amixer set Master toggle</command> -->
+        <command>amixer -D pulse set Master 1+ toggle</command>  
       </action>
     </keybind>
-    <!-- 
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <startupnotify>  
+          <enabled>true</enabled>  
+          <name>volumedown</name>  
+        </startupnotify> 
+        <command>amixer set Master 5%-</command>
+      </action>
+    </keybind>
+<!-- 
     <keybind key="XF86AudioPlay">
       <action name="Execute">
         <command>command to play/pause</command>
