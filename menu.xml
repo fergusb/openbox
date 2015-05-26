@@ -39,7 +39,9 @@
 		</item>
 		<separator/>
 		<item label="Exit">
-			<action name="Exit"/>
+			<action name="Exit">
+				<execute>openbox --exit &amp;&amp; dm-tool lock</execute>
+			</action>
 		</item>
 	</menu>
 </openbox_menu>
