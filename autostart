@@ -16,9 +16,6 @@ xsetroot -solid "#505050" &
 ## GNOME PolicyKit and Keyring
 eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
 
-# keychain
-# keychain &
-
 # network manager
 # (sleep 3 && /usr/bin/nm-applet --sm-disable) &
 
@@ -29,8 +26,8 @@ eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
 xset m default &  # System Default
 # xset m 0 10 &     # Glacial
 
-# disable beeps
-xset -b &
+# turn on/off system beep
+xset b off &
  
 # launch Xcomppmgr and tint2 
 if which tint2 >/dev/null 2>&1; then
@@ -61,7 +58,7 @@ amixer -- sset Headphone playback 0dB &
 conky -q &
 
 # music
-mopidy &
+# mopidy &
 # mpd ~/.mpd.conf
 # mpd ~/.config/mpd/mpd.conf &
 

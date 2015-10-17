@@ -435,15 +435,15 @@
     <!-- Take a screenshot when Print is pressed -->
     <keybind key="Print">
       <action name="Execute">
-        <!-- <command>gnome-screenshot</command> -->
-        <execute>scrot -e 'mv $f ~/Pictures/'</execute>
+        <command>gnome-screenshot</command>
+        <!-- <execute>scrot -e 'mv $f ~/Pictures/'</execute> -->
       </action>
     </keybind>
     <!-- Take a screenshot of the current window when Alt+Print are pressed -->
     <keybind key="A-Print">
       <action name="Execute">
-        <execute>scrot -u -e 'mv $f ~/Pictures/'</execute>
-        <!-- <command>gnome-screenshot -w</command> -->
+        <!-- <execute>scrot -u -e 'mv $f ~/Pictures/'</execute> -->
+        <command>gnome-screenshot -w</command>
       </action>
     </keybind>
     <!-- Begin Media Keys  -->

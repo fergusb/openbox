@@ -18,7 +18,7 @@
 		</item>
 		<item label="Music">
 			<action name="Execute">
-				<execute>sonata</execute>
+				<execute>audacious</execute>
 			</action>
 		</item>
 		<!-- This requires the presence of the 'menu' package to work -->
